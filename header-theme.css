@@ -1,0 +1,207 @@
+:root {
+  --ink: #4a0a20;
+  --ink-deep: #2e0613;
+  --cream: #fffafa;
+  --sand: #f8dce4;
+  --coral: #d61043;
+  --yellow: #f5bf49;
+  --line: rgba(83, 7, 33, 0.16);
+}
+
+.official-style-header {
+  position: relative;
+  min-height: 100px;
+  padding: 16px clamp(24px, 5vw, 80px);
+  background: #d61043;
+  color: #fff;
+}
+
+.official-style-header .brand {
+  flex: 0 0 auto;
+}
+
+.official-style-header .brand img {
+  width: 62px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.official-style-header .brand span {
+  display: none;
+}
+
+.site-nav {
+  gap: 0;
+  margin-left: auto;
+  margin-right: 22px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f3a7bb;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.site-nav a {
+  padding: 12px 13px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.site-nav a:not(.nav-contact):hover {
+  background: rgba(255, 255, 255, 0.32);
+  text-decoration: none;
+}
+
+.site-nav .nav-current {
+  background: #640b24;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.site-nav .nav-contact {
+  border: 0;
+  padding: 12px 13px;
+}
+
+.header-mail {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: transform .2s, background .2s;
+}
+
+.header-mail:hover {
+  transform: rotate(-6deg) scale(1.06);
+  background: #fff;
+  color: #d61043;
+}
+
+.hero {
+  min-height: 645px;
+}
+
+.hero-scrim {
+  background: linear-gradient(106deg, rgba(72, 0, 25, .8) 2%, rgba(120, 4, 39, .62) 43%, rgba(214, 16, 67, .05) 86%);
+}
+
+.hero h1 em,
+.section-heading em {
+  color: #ffbbcf;
+}
+
+.button {
+  border-color: #ffafc5;
+  background: #d61043;
+}
+
+.button:hover {
+  color: #d61043;
+}
+
+.availability {
+  border-top: 5px solid #d61043;
+  box-shadow: 0 12px 35px rgba(97, 6, 35, .14);
+}
+
+.status-dot {
+  background: #d61043;
+}
+
+.service-card--wide {
+  background: #6d0929;
+}
+
+.service-card--accent {
+  background: #f8dbe3;
+}
+
+.service-card--accent .service-icon,
+.service-card--accent .service-number {
+  color: #d61043;
+}
+
+.about {
+  background: #f9e5eb;
+}
+
+.contact-panel {
+  background: #5d0924;
+}
+
+.contact-panel h2 em {
+  color: #ffb6ca;
+}
+
+.button-contact {
+  border-color: #d61043;
+  background: #d61043;
+  color: #fff;
+}
+
+.button-contact:hover {
+  color: #d61043;
+}
+
+.site-footer {
+  background: #2e0613;
+}
+
+.footer-contact p {
+  color: #ffafc5 !important;
+}
+
+@media (max-width: 760px) {
+  .official-style-header {
+    min-height: 76px;
+    padding: 8px 19px;
+  }
+
+  .official-style-header .brand img {
+    width: 51px;
+    height: 58px;
+  }
+
+  .official-style-header .menu-button {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .official-style-header .site-nav {
+    top: 76px;
+    right: 0;
+    width: min(290px, 100vw);
+    margin: 0;
+    padding: 16px;
+    background: #d61043;
+    border-radius: 0 0 0 16px;
+  }
+
+  .official-style-header .site-nav a {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .official-style-header .site-nav .nav-contact {
+    margin-top: 7px;
+  }
+
+  .header-mail {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: 614px;
+  }
+
+  .hero-copy {
+    padding-top: 36px;
+  }
+}

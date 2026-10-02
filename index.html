@@ -14,20 +14,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header-theme.css" />
+    <link rel="stylesheet" href="site.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">本文へ移動</a>
-    <header class="site-header">
+    <header class="site-header official-style-header">
       <a class="brand" href="#top" aria-label="出山IT事務所 トップへ">
         <img src="assets/logo.png" width="59" height="67" alt="" />
         <span>出山IT事務所<small>DEYAMA IT OFFICE</small></span>
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">メニューを開く</span></button>
       <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
-        <a href="#services">できること</a>
+        <a class="nav-current" href="#top">Home</a>
+        <a href="#services">サービス</a>
         <a href="#about">事業案内</a>
         <a href="https://www.deyama-it.com/contact" class="nav-contact">お問い合わせ <span aria-hidden="true">↗</span></a>
       </nav>
+      <a class="header-mail" href="mailto:contact@deyama-it.com" aria-label="メールでお問い合わせ"><span aria-hidden="true">✉</span></a>
     </header>
 
     <main id="main">
