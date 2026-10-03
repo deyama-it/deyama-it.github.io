@@ -1,0 +1,112 @@
+.contact-panel .contact-intro {
+  max-width: 46rem;
+  margin-bottom: 30px;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 900px);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-method {
+  display: grid;
+  min-height: 220px;
+  padding: 24px 20px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(76, 0, 23, 0.13);
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-method:hover,
+.contact-method:focus-visible {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.19);
+  box-shadow: 0 16px 28px rgba(76, 0, 23, 0.23);
+}
+
+.contact-method:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
+
+.contact-method__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--brand-red);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.contact-method__icon--note {
+  width: 48px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: -0.08em;
+}
+
+.contact-method__type {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.77);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.contact-method strong {
+  align-self: start;
+  overflow-wrap: anywhere;
+  font-size: clamp(16px, 1.65vw, 20px);
+  line-height: 1.35;
+}
+
+.contact-method__note {
+  align-self: end;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .contact-method {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 15px;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .contact-method__icon {
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .contact-method__type {
+    margin: 0 0 4px;
+  }
+
+  .contact-method__note {
+    grid-column: 2;
+    margin: 8px 0 0;
+  }
+}
