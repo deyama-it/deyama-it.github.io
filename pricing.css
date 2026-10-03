@@ -1,0 +1,255 @@
+.pricing {
+  padding: 128px max(30px, calc((100vw - 1130px) / 2));
+  background: #fff7f9;
+}
+
+.pricing-heading {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 0.8fr);
+  column-gap: clamp(48px, 9vw, 125px);
+  align-items: end;
+  margin-bottom: 54px;
+}
+
+.pricing-heading .eyebrow {
+  grid-column: 1;
+  color: var(--red);
+}
+
+.pricing-heading h2 {
+  grid-column: 1;
+  margin: 0;
+  font-family: var(--sans);
+  font-size: clamp(31px, 3.7vw, 50px);
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.48;
+}
+
+.pricing-heading h2 em {
+  color: var(--red);
+  font-style: normal;
+}
+
+.pricing-heading > p:not(.eyebrow):not(.delivery-note) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.delivery-note {
+  grid-column: 1 / -1;
+  margin: 29px 0 0;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  color: #73515c;
+  font-size: 13px;
+}
+
+.delivery-note span {
+  margin-right: 6px;
+  color: var(--red);
+  font-weight: 900;
+}
+
+.delivery-note strong {
+  margin-left: 5px;
+  color: var(--wine);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.price-card {
+  display: flex;
+  min-height: 286px;
+  flex-direction: column;
+  padding: 29px 27px 25px;
+  border: 1px solid rgba(103, 13, 42, 0.16);
+  background: #fff;
+}
+
+.price-card--featured {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 16px 31px rgba(136, 9, 49, 0.17);
+}
+
+.price-card__eyebrow {
+  margin: 0 0 38px;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.price-card--featured .price-card__eyebrow {
+  color: #ffd2dc;
+}
+
+.price-card h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.price-card__amount {
+  margin: 21px 0 17px;
+  font-size: clamp(31px, 3.1vw, 43px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.price-card__amount span {
+  margin-right: 2px;
+  font-size: 17px;
+  letter-spacing: 0;
+  vertical-align: 14px;
+}
+
+.price-card__amount small {
+  margin-left: 2px;
+  font-size: 17px;
+  letter-spacing: 0;
+}
+
+.price-card__description {
+  margin: auto 0 0;
+  color: #795a64;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.price-card--featured .price-card__description {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.start-pack {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr auto;
+  gap: 26px;
+  align-items: center;
+  margin-top: 15px;
+  padding: 28px 30px;
+  background: #f5dce4;
+}
+
+.start-pack .eyebrow {
+  margin: 0 0 5px;
+  color: var(--red);
+  font-size: 9px;
+}
+
+.start-pack h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.start-pack > p {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+}
+
+.start-pack strong {
+  color: var(--red);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.start-pack p span {
+  color: #72535c;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.start-pack a {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid currentColor;
+  padding: 7px 0;
+  color: var(--wine);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.start-pack a:hover {
+  color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .pricing {
+    padding: 82px 24px;
+  }
+
+  .pricing-heading {
+    display: block;
+    margin-bottom: 38px;
+  }
+
+  .pricing-heading .eyebrow {
+    margin-bottom: 11px;
+  }
+
+  .pricing-heading h2 {
+    font-size: 30px;
+  }
+
+  .pricing-heading > p:not(.eyebrow):not(.delivery-note) {
+    margin-top: 21px;
+    font-size: 14px;
+  }
+
+  .delivery-note {
+    margin-top: 22px;
+    font-size: 12px;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .price-card {
+    min-height: 0;
+    padding: 23px 21px;
+  }
+
+  .price-card__eyebrow {
+    margin-bottom: 17px;
+  }
+
+  .price-card__amount {
+    margin: 15px 0;
+  }
+
+  .price-card__description {
+    margin-top: 0;
+  }
+
+  .start-pack {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin-top: 10px;
+    padding: 25px 21px;
+  }
+
+  .start-pack a {
+    width: fit-content;
+  }
+}
